@@ -1,0 +1,186 @@
+.app__footer {
+      /* width: 95%; */
+      background-color: var(--color-footer);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 0;
+}
+
+.app__footer-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.5fr 1fr;
+}
+
+.app__footer-bottom {
+      color: var(--color-white);
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid #d6cbcb;
+      width: 100%;
+      margin-top: 2rem;
+      height: max-content;
+      padding: 1rem 0;
+}
+
+.contact_follow-links svg {
+      padding: 0rem 1rem 1rem 0rem;
+      filter: invert(1);
+      cursor: pointer;
+}
+
+.subText {
+      font-family: var(--font-alt);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+
+      letter-spacing: 0.03em;
+      color: var(--color-white);
+      padding: 0 0 0.4rem 0;
+      cursor: pointer;
+}
+
+.p_subtext {
+      font-family: var(--font-alt);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      padding: 0 0 1rem 0;
+}
+
+
+.foot-head {
+      font-family: var(--color-alt);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 19px;
+
+      display: flex;
+      align-items: flex-end;
+      color: var(--color-subtext);
+      padding: 0 0 0.8rem 0;
+}
+
+.flex {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+}
+
+.flex svg {
+      filter: invert(1);
+      padding-top: 5px;
+}
+
+@media screen and (max-width:950px) {
+      .app__footer-links {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                  "logo follow"
+                  "info contact";
+            grid-gap: 1rem;
+            width: 96%;
+      }
+
+      .app__footer-logo {
+            grid-area: logo;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+      }
+
+      .app__footer-info {
+            grid-area: info;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+      }
+
+      .app__footer-contact {
+            grid-area: contact;
+            width: 80%;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: flex-end;
+      }
+
+      .app__footer-contact_follow {
+            grid-area: follow;
+            width: 80%;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: flex-end;
+      }
+
+      .app__footer-bottom {
+            width: 100%;
+      }
+
+      .section__padding {
+            padding: 2rem 1rem;
+      }
+
+      .flex svg {
+            width: 40px;
+            height: 20px;
+      }
+
+      .contact_follow-links svg {
+            padding: 0rem 0rem 0rem 1rem;
+      }
+}
+
+@media screen and (max-width:450px) {
+      .app__footer-links {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                  "logo follow"
+                  "info info"
+                  "contact contact";
+            grid-gap: 1rem;
+            width: 96%;
+      }
+
+      .app__footer-info,
+      .app__footer-logo,
+      .app__footer-contact,
+      .app__footer-contact_follow {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+      }
+
+      .footer-info_links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-gap: 0.5rem;
+            width: 100%;
+            align-items: center;
+      }
+}
+
+@media screen and (max-width:300px) {
+      .app__footer-links {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                  "logo"
+                  "follow"
+                  "info"
+                  "contact";
+            grid-gap: 1rem;
+            width: 96%;
+      }
+}

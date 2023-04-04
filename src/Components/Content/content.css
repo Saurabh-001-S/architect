@@ -1,0 +1,319 @@
+* {
+      margin: 0;
+      padding: 0;
+}
+
+.app__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+/*----------About Section------------------*/
+
+.app__content-about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 3rem;
+}
+
+.app__content-about_imgBox1 img {
+      padding: 1rem 0;
+}
+
+.app__content-about_imgBox1 img:first-child {
+      border-radius: 0px 91px 0px 14px;
+}
+
+.app__content-about_imgBox1 img:last-child {
+      border-radius: 0px 0px 0px 62px;
+}
+
+.app__content-about_imgBox2 img {
+      border-radius: 0px 91px 0px 14px;
+}
+
+.app__content-about_text {
+      padding-left: 2rem;
+}
+
+.app__content-about_text h1 {
+      margin: 0 0 1.5rem 0;
+}
+
+.app__content-about_text>.about_text_p {
+      font-family: var(--font-alt);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 25px;
+      color: var(--color-black);
+      padding: 1.5rem 0;
+}
+
+.app__content-about_text a {
+      margin: 2rem 0;
+}
+
+@media screen and (max-width:1200px) {
+      .app__content-about {
+            padding: 1rem 0rem;
+      }
+}
+
+@media screen and (max-width:950px) {
+
+      .app__content-about_imgBox1 img:first-child,
+      .app__content-about_imgBox1 img:last-child,
+      .app__content-about_imgBox2 img {
+            border-radius: 0;
+      }
+
+      .app__content-about_imgBox1 img:first-child {
+            padding-bottom: 1rem;
+      }
+
+      .app__content-about {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            grid-template-areas:
+                  "imgb1 imgb2"
+                  "text text";
+            grid-gap: 2rem;
+      }
+
+      .app__content-about_imgBox1 {
+            grid-area: imgb1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 95%;
+            align-items: center;
+            padding: 0.5rem;
+            padding-bottom: 0;
+      }
+
+      .app__content-about_imgBox2 {
+            grid-area: imgb2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 95%;
+            align-items: center;
+            padding: 0.5rem;
+            padding-top: 0;
+      }
+
+      .app__content-about_imgBox1 img,
+      .app__content-about_imgBox2 img {
+            width: 100%;
+      }
+
+      .app__content-about_text {
+            grid-area: text;
+            padding-left: 0.5rem;
+            width: 95%;
+      }
+
+      .app__content-about_text a {
+            margin: 0.2rem 0;
+      }
+
+}
+
+@media screen and (max-width:850px) {
+      .section__padding {
+            padding: 0.5rem 2rem;
+      }
+}
+
+@media screen and (max-width:580px) {
+      .app__content-about {
+            grid-template-rows: auto auto 1fr;
+            grid-template-areas:
+                  "imgb1"
+                  "imgb2"
+                  "text";
+      }
+
+      .app__content-about_imgBox1 img {
+            padding: 0.2rem;
+      }
+}
+
+/*----------Goals Section------------------*/
+.app__content-goals {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+}
+
+.app__content-goals_content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+}
+
+.app__content-goals_text-1 {
+      display: grid;
+      grid-template-columns: 0.1fr 0.2fr 0.5fr;
+      align-items: center;
+      grid-gap: 0.8rem;
+}
+
+.app__content-goals_text-2 {
+      display: grid;
+      grid-template-columns: 0.2fr 0.5fr 0.1fr;
+      align-items: center;
+      grid-gap: 0.8rem;
+}
+
+.app__content-goals_text-1 h1,
+.app__content-goals_text-2 h1 {
+      font-family: 'SF Pro Display';
+      font-weight: 900;
+      font-size: 200px;
+      line-height: 239px;
+      display: flex;
+      align-items: center;
+      color: #c8c5c55a;
+}
+
+.app__content-goals_text-1 p,
+.app__content-goals_text-2 p {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 36px;
+      color: #333333;
+}
+
+@media screen and (max-width: 980px) {
+      .app__content-goals_text-2 {
+            grid-template-columns: 0.2fr 0.8fr;
+      }
+
+      .app__content-goals {
+            margin: 2rem 0;
+      }
+}
+
+@media screen and (max-width: 768px) {
+      .app__content-goals_content {
+            grid-template-columns: auto;
+            grid-gap: 2rem;
+      }
+
+      .app__content-goals_text-1,
+      .app__content-goals_text-2 {
+            grid-template-columns: 0.1fr auto;
+            grid-gap: 0.3rem;
+      }
+
+      .display-none {
+            display: none;
+      }
+}
+
+@media screen and (max-width: 280px) {
+
+      .app__content-goals_text-1,
+      .app__content-goals_text-2 {
+            grid-template-columns: auto;
+            grid-gap: 0.3rem;
+      }
+}
+
+/*----------Project Section------------------*/
+
+.app__content-project {
+      width: 98vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+.content-project_heading {
+      display: flex;
+      justify-content: flex-start;
+      width: 94%;
+      margin: 0rem 0rem 2rem 6rem;
+}
+
+.content-project_img-row1 {
+      display: flex;
+      column-gap: 2rem;
+}
+
+.content-project_img-row2 {
+      display: flex;
+      column-gap: 2rem;
+      padding-top: 1.5rem;
+}
+
+.app__content-project_button {
+      display: flex;
+      justify-content: end;
+      margin: 1.5rem 2rem 0 0;
+      width: 80%;
+}
+
+@media screen and (max-width:1050px) {
+      .app__content-project_img {
+            width: 95%;
+            overflow: hidden;
+      }
+
+
+      .content-project_img-row1 img {
+            width: 50%;
+      }
+
+      .content-project_img-row2 {
+            width: 50%;
+      }
+
+      .content-project_heading {
+            margin: 1rem 0rem;
+      }
+
+      .app__content-project_button {
+            justify-content: end;
+            width: 95%;
+            margin: 1.5rem 0rem;
+      }
+
+      .app__content-project {
+            margin-bottom: 2rem;
+      }
+}
+
+@media screen and (max-width:550px) {
+      .app__content-project_img {
+            width: 95%;
+            overflow: hidden;
+      }
+
+      .content-project_img-row1 img {
+            width: 100%;
+      }
+
+      .content-project_img-row2 {
+            width: 100%;
+      }
+
+      .content-project_img-row1 {
+            flex-direction: column;
+            row-gap: 2rem;
+      }
+
+      .content-project_img-row2 {
+            flex-direction: column;
+            row-gap: 2rem;
+            padding-top: 2rem;
+      }
+}

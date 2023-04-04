@@ -1,0 +1,52 @@
+.app__conPage {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.app__conPage-row1 {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2rem;
+}
+
+.app__conPage-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2rem;
+}
+
+.app__conPage-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.5rem;
+}
+
+.app__conPage-img {
+      width: 60%;
+}
+
+.app__conPage-img img {
+      width: 100%;
+}
+
+.isdisplay {
+      padding: 2rem;
+      width: 100%;
+}
+
+.notdisplay {
+      display: none;
+}
+
+.app__contact {
+      width: 100%;
+}

@@ -1,0 +1,118 @@
+* {
+      text-decoration: none;
+}
+
+.app__navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 4rem;
+}
+
+.app__navbar-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.app__navbar-links li {
+      padding: 0 1rem 0rem 0rem;
+      list-style: none;
+      padding: 0 4rem 0 0;
+}
+
+.app__navbar-links li .a {
+      text-decoration: none;
+      color: var(--color-black);
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+
+      font-size: 16px;
+      line-height: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+}
+
+.app__navbar-links li .a:hover {
+      color: var(--color-blog);
+      text-decoration: underline;
+}
+
+.app__navbar-smallscreen {
+      display: none;
+}
+
+.app__navbar-smallscreen_overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: max-content;
+
+      transition: 0.8s ease;
+      background: var(--color-white);
+      flex-direction: column;
+      z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+      font-size: 27px;
+      color: var(--color-blog);
+      cursor: pointer;
+
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+}
+
+.app__navbar-smallscreen_links {
+      list-style: none;
+      padding-top: 2rem;
+      transform: perspective();
+}
+
+.app__navbar-smallscreen_links li {
+      margin: 2rem;
+      cursor: pointer;
+      color: var(--color-golden);
+      font-size: 1.5rem;
+      text-align: center;
+      font-family: var(--font-base);
+}
+
+.app__navbar-smallscreen_links li:hover {
+      color: var(--color-white);
+}
+
+.app__navbar-smallscreen_links li .a {
+      text-decoration: none;
+      color: var(--color-black);
+}
+
+@media screen and (min-width: 800px) and (max-width:1100px) {
+      .app__navbar-links li {
+            padding: 0 1.5rem 0 0;
+      }
+}
+
+@media screen and (max-width: 800px) {
+      .app__navbar-smallscreen {
+            display: block;
+      }
+
+      .app__navbar-links {
+            display: none;
+      }
+}
+
+@media screen and (max-width: 560px) {
+      .app__navbar-smallscreen {
+            display: block;
+      }
+
+      .app__navbar-links {
+            display: none;
+      }
+}

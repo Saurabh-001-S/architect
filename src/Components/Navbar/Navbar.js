@@ -14,7 +14,7 @@ const Navbar = () => {
                         <img src={images.Home.Logo} alt="" />
                   </Link>
                   <ul className='app__navbar-links'>
-                        <li className='p__opensans'><Link className='a' to="/home">HOME</Link></li>
+                        <li className='p__opensans'><Link className='a' to="/">HOME</Link></li>
                         <li className='p__opensans'><Link className='a' to="/gallery">GALLERY</Link></li>
                         <li className='p__opensans'><Link className='a' to="/project">PROJECT</Link></li>
                         <li className='p__opensans'><Link className='a' to="/contact">CONTACT</Link></li>
